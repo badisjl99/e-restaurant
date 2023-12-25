@@ -15,15 +15,15 @@ function Header() {
   };
 
   const logoStyle = {
-    width: '125px',
-    height: '90px',
+    width: '100px',
+    height: '50px',
     position: 'absolute',
-    top: '20px',
-    left: '20px',
+    top: '50px',
+    left: '50px',
   };
 
   const foodImageStyle = {
-    width: '30%', 
+    width: '35%', 
     borderRadius: '50%',
     border: '3px solid red',
     marginLeft: '250px',
@@ -34,14 +34,14 @@ function Header() {
     position: 'absolute', 
     top: '50%', 
     transform: 'translateY(-50%)', 
-    marginLeft: '1200px',
+    marginLeft: '1400px',
     textAlign: 'left',
   };
 
   return (
     <div style={pageStyle}>
       <div style={containerStyle}>
-        <a href="www.google.com"> <img src="https://i.ibb.co/9N29Yrj/logo.png" alt="Logo" style={logoStyle} /></a>   
+        <a href="www.google.com"> <img src="https://1000logos.net/wp-content/uploads/2023/04/Chilis-logo-500x281.png" alt="Logo" style={logoStyle} /></a>   
         <img src="https://i.ibb.co/b2CDvny/food.jpg" alt="Food" style={foodImageStyle} />
 
         <div style={textContainerStyle}>
