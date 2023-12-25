@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function ContactForm() {
   const backgroundImageUrl = 'https://cdn.pixabay.com/photo/2017/10/22/20/43/table-2879215_1280.jpg';
+  const contactImageUrl = 'https://i.ibb.co/GsWtZMb/adz.png';
 
   const containerStyle = {
     backgroundImage: `url(${backgroundImageUrl})`,
@@ -21,6 +22,15 @@ function ContactForm() {
 
   const inputStyle = {
     maxWidth: '550px',
+  };
+
+  const imageStyle = {
+    maxWidth: '100%',
+    width:'320px',
+    height:'320px',
+    marginLeft: '700px',
+    marginTop:'-500px',
+    borderRadius: '300px',
   };
 
   return (
@@ -60,14 +70,18 @@ function ContactForm() {
               style={inputStyle}
             ></textarea>
           </div>
+
           <br></br>
-          <button className="btn btn-lg btn-danger" type="button" style={{ width: '350px', height: '50px', fontSize: '25px' }}>
-            Voir Notre Menu
+          <button className="btn btn-lg btn-danger" type="button" style={{ width: '350px', height: '50px', fontSize: '25px' ,marginLeft:'100px'}}>
+            Envoyer
           </button>
         </form>
-        
       </div>
-    
+      
+      <div className="form-group">
+            <img src={contactImageUrl} alt="Contact" style={imageStyle} />
+          </div>
+
     </div>
   );
 }

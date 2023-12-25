@@ -2,71 +2,20 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Menu() {
+  const [fajitasData, setFajitasData] = useState([]);
+  const [pastaData, setPastaData] = useState([]);
 
-  const fajitasData = [
-    {
-        title: 'Trio Fajitas',
-        price: '49.90 DT',
-        image: 'https://imgs.search.brave.com/f928UhWdrnTOiGR7QURVQyTdOaloUgnbA_3nnMDNB2w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/MDk4ODQ4NS9waG90/by9zdXByZW1lLXBp/enphLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1wb3U2ZmVD/ZG9RejNKNmdGbXo2/ODdKWFgzSl9tWlh3/cUEyQzdIaTVZLW5r/PQ',
-      },
-    
-      {
-        title: 'Pizza',
-        price: '25 DT',
-        image: 'https://imgs.search.brave.com/3FH-XhRVPyYW6dl32gTPFX5ohSmkCi3btvpExzLgaYg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzUwLzcyLzg2/LzM2MF9GXzI1MDcy/ODYyMF9aanBuZXVh/ZlhzSEJPV3cxcUti/dDVIYlVESjBGOG9h/WS5qcGc'
-      },
-  
-      {
-        title: 'Lablebi',
-        price: '7 DT',
-        image: 'https://imgs.search.brave.com/-9qmtXr7Ybwu-U8tbjOgDcRLSoRbVbUnmUQlWcl7AgE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwMS5ueXQuY29t/L2ltYWdlcy8yMDIw/LzAyLzE5L2Rpbmlu/Zy8xNGFwcGVyZXgv/MTRhcHBlcmV4LWFy/dGljbGVMYXJnZS5q/cGc_dz0xMjgwJnE9/NzU'
-      },
-  
-      {
-          title: 'Trio Fajitas',
-          price: '49.90 DT',
-          image: 'https://imgs.search.brave.com/f928UhWdrnTOiGR7QURVQyTdOaloUgnbA_3nnMDNB2w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/MDk4ODQ4NS9waG90/by9zdXByZW1lLXBp/enphLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1wb3U2ZmVD/ZG9RejNKNmdGbXo2/ODdKWFgzSl9tWlh3/cUEyQzdIaTVZLW5r/PQ',
-        },
-      
-        {
-          title: 'Pizza',
-          price: '25 DT',
-          image: 'https://imgs.search.brave.com/3FH-XhRVPyYW6dl32gTPFX5ohSmkCi3btvpExzLgaYg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzUwLzcyLzg2/LzM2MF9GXzI1MDcy/ODYyMF9aanBuZXVh/ZlhzSEJPV3cxcUti/dDVIYlVESjBGOG9h/WS5qcGc'
-        },
-    
-        {
-          title: 'Lablebi',
-          price: '7 DT',
-          image: 'https://imgs.search.brave.com/-9qmtXr7Ybwu-U8tbjOgDcRLSoRbVbUnmUQlWcl7AgE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwMS5ueXQuY29t/L2ltYWdlcy8yMDIw/LzAyLzE5L2Rpbmlu/Zy8xNGFwcGVyZXgv/MTRhcHBlcmV4LWFy/dGljbGVMYXJnZS5q/cGc_dz0xMjgwJnE9/NzU'
-        },
-  ];
+  useEffect(() => {
 
-  const pastaData = [
-    {
-      title: 'Pizza',
-      price: '25 DT',
-      image: 'https://imgs.search.brave.com/3FH-XhRVPyYW6dl32gTPFX5ohSmkCi3btvpExzLgaYg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzUwLzcyLzg2/LzM2MF9GXzI1MDcy/ODYyMF9aanBuZXVh/ZlhzSEJPV3cxcUti/dDVIYlVESjBGOG9h/WS5qcGc'
-    },
-    {
-        title: 'Trio Fajitas',
-        price: '49.90 DT',
-        image: 'https://imgs.search.brave.com/f928UhWdrnTOiGR7QURVQyTdOaloUgnbA_3nnMDNB2w/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTI3/MDk4ODQ4NS9waG90/by9zdXByZW1lLXBp/enphLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1wb3U2ZmVD/ZG9RejNKNmdGbXo2/ODdKWFgzSl9tWlh3/cUEyQzdIaTVZLW5r/PQ',
-      },
-    
-      {
-        title: 'Pizza',
-        price: '25 DT',
-        image: 'https://imgs.search.brave.com/3FH-XhRVPyYW6dl32gTPFX5ohSmkCi3btvpExzLgaYg/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAyLzUwLzcyLzg2/LzM2MF9GXzI1MDcy/ODYyMF9aanBuZXVh/ZlhzSEJPV3cxcUti/dDVIYlVESjBGOG9h/WS5qcGc'
-      },
-  
-      {
-        title: 'Lablebi',
-        price: '7 DT',
-        image: 'https://imgs.search.brave.com/-9qmtXr7Ybwu-U8tbjOgDcRLSoRbVbUnmUQlWcl7AgE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMwMS5ueXQuY29t/L2ltYWdlcy8yMDIw/LzAyLzE5L2Rpbmlu/Zy8xNGFwcGVyZXgv/MTRhcHBlcmV4LWFy/dGljbGVMYXJnZS5q/cGc_dz0xMjgwJnE9/NzU'
-      },
-  
-  ];
+    axios.get('http://localhost:9999/admin/menu')
+      .then(response => setFajitasData(response.data))
+      .catch(error => console.error('Error fetching Fajitas data:', error));
 
+
+    axios.get('http://localhost:9999/admin/menu')
+      .then(response => setPastaData(response.data))
+      .catch(error => console.error('Error fetching Pasta data:', error));
+  }, []);
   return (
     <div>
       <br /><br />
