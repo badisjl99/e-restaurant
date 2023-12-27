@@ -1,16 +1,29 @@
 import React from "react";
 import LandingPage from '../src/views/LandingPage';
+import AdminPage from "./views/AdminPage";
+
+function App(n) {
+
+  n= 3 ;
+
+ 
+
+    if (n === 1 ){
+      return(
+        <div><LandingPage/></div>
+
+      );
 
 
-function App() {
-  return (
-   <div>
+    }else{
+      return(
+        <div><AdminPage/></div>
 
+      );
+    }
 
-<LandingPage/>
-
-   </div>
-  );
+ 
+  
 }
 
 export default App;
